@@ -208,9 +208,9 @@ x
 
 `@sct`
 ```{r}
-ex() %>% check_object("x", undefined_msg = "Stellen Sie sicher, dass Sie eine Variable `x` definieren.")  %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie den richtigen Wert `x` zuweisen.")
+ex() %>% check_object("x", undefined_msg = "Stelle sicher, dass du eine Variable `x` definierst.")  %>% check_equal(incorrect_msg = "Stelle sicher, dass du den richtigen Wert `x` zuweist.")
 
-success_msg("Gute Arbeit! Haben Sie bemerkt, dass R den Wert einer Variablen nicht in die Konsole druckt, wenn Sie die Zuweisung vorgenommen haben? `x <- 42` hat keine Ausgabe erzeugt, weil R davon ausgeht, dass Sie diese Variable in Zukunft benötigen werden. Andernfalls hätten Sie den Wert nicht in einer Variablen gespeichert, oder? Fahren Sie mit der nächsten Übung fort!")
+success_msg("Gute Arbeit! Hast du bemerkt, dass R den Wert einer Variablen nicht in die Konsole druckt, wenn du die Zuweisung vorgenommen hast? `x <- 42` hat keine Ausgabe erzeugt, weil R davon ausgeht, dass du diese Variable in Zukunft benötigen wirst. Andernfalls hättest du den Wert nicht in einer Variablen gespeichert, oder? Fahre mit der nächsten Übung fort!")
 ```
 
 ---
@@ -260,9 +260,9 @@ my_apples
 
 `@sct`
 ```{r}
-ex() %>% check_object("my_apples", undefined_msg = "Bitte stellen Sie sicher, dass Sie eine Variable `my_apples` definieren.") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie den richtigen Wert `my_apples` zuweisen.")
+ex() %>% check_object("my_apples", undefined_msg = "Bitte stelle sicher, dass du eine Variable `my_apples` definierst.") %>% check_equal(incorrect_msg = "Stelle sicher, dass du den richtigen Wert `my_apples` zuweist.")
 
-ex() %>% check_output_expr("my_apples", missing_msg = "Haben Sie R explizit angewiesen, die Variable `my_apples` in der Konsole auszugeben?")
+ex() %>% check_output_expr("my_apples", missing_msg = "Hast du R explizit angewiesen, die Variable `my_apples` in der Konsole auszugeben?")
 
 success_msg("Großartig! Weiter zur nächsten Übung!")
 
@@ -327,15 +327,15 @@ my_fruit <- my_apples + my_oranges
 
 `@sct`
 ```{r}
-msg <- "Haben Sie `my_fruit <- my_apples + my_oranges` verwendet, um die Variable `my_fruit` zu erstellen?"
-ex() %>% check_object("my_apples") %>% check_equal(incorrect_msg = "Behalten Sie die Zeile bei, die 5 `my_apples` zuweist.")
+msg <- "Hast du `my_fruit <- my_apples + my_oranges` verwendet, um die Variable `my_fruit` zu erstellen?"
+ex() %>% check_object("my_apples") %>% check_equal(incorrect_msg = "Behalte die Zeile bei, die 5 `my_apples` zuweist.")
 
-ex() %>% check_object("my_oranges") %>% check_equal(incorrect_msg = "Behalten Sie die Zeile bei, die 6 `my_oranges` zuweist.")
+ex() %>% check_object("my_oranges") %>% check_equal(incorrect_msg = "Behalte die Zeile bei, die 6 `my_oranges` zuweist.")
 
-ex() %>% check_output_expr("my_apples + my_oranges",missing_msg = "Stellen Sie sicher, dass Sie das Ergebnis der Addition von `my_apples` und `my_oranges` ausgeben. Das Codebeispiel in der Beschreibung gibt bereits die Antwort auf diese Anweisung!")
+ex() %>% check_output_expr("my_apples + my_oranges",missing_msg = "Stelle sicher, dass du das Ergebnis der Addition von `my_apples` und `my_oranges` ausgeben. Das Codebeispiel in der Beschreibung gibt bereits die Antwort auf diese Anweisung!")
 
 ex() %>% check_object("my_fruit", undefined_msg = msg)  %>% check_equal(incorrect_msg = msg)
-success_msg("Gut gemacht! Der große Vorteil von Berechnungen mit Variablen ist die Wiederverwendbarkeit. Wenn Sie `my_apples` einfach auf 12 statt auf 5 ändern und das Skript erneut ausführen, wird `my_fruit` automatisch ebenfalls aktualisiert. Fahren Sie mit der nächsten Übung fort.")
+success_msg("Gut gemacht! Der große Vorteil von Berechnungen mit Variablen ist die Wiederverwendbarkeit. Wenn du `my_apples` einfach auf 12 statt auf 5 ändern und das Skript erneut ausführst, wird `my_fruit` automatisch ebenfalls aktualisiert. Fahre mit der nächsten Übung fort.")
 ```
 
 ---
@@ -392,23 +392,23 @@ my_fruit
 
 `@sct`
 ```{r}
-ex() %>% check_error(incorrect_msg = "Sie können dies tun, indem Sie die Variable `my_oranges` auf einen numerischen Wert und nicht auf eine Zeichenkette setzen!")
+ex() %>% check_error(incorrect_msg = "Du kannst dies tun, indem du die Variable `my_oranges` auf einen numerischen Wert und nicht auf eine Zeichenkette setzt!")
 
-ex() %>% check_object("my_apples") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass `my_apples` immer noch `5` enthält.")
+ex() %>% check_object("my_apples") %>% check_equal(incorrect_msg = "Stelle sicher, dass `my_apples` immer noch `5` enthält.")
 
-ex() %>% check_object("my_oranges") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass `my_oranges` gleich `6` ist.")
+ex() %>% check_object("my_oranges") %>% check_equal(incorrect_msg = "Stelle sicher, dass `my_oranges` gleich `6` ist.")
 
 ex() %>% check_object("my_fruit") %>% check_equal(incorrect_msg = "Der Wert von `my_fruit` ist nicht korrekt. Es sollte 11 sein, die Summe von `my_apples` und `my_oranges`.")
 
 ex() %>% check_object("my_fruit")%>% check_or(
-  check_code(.,"my_fruit\\s*<-\\s*my_apples\\s*\\+\\s*my_oranges", missing_msg = "Haben Sie `my_fruit` als Summe der Variablen `my_apples` und `my_oranges` erstellt?", append=F),
-  check_code(.,"my_fruit\\s*<-\\s*my_oranges\\s*\\+\\s*my_apples", missing_msg = "Haben Sie `my_fruit` als Summe der Variablen `my_apples` und `my_oranges` erstellt?", append=F)
+  check_code(.,"my_fruit\\s*<-\\s*my_apples\\s*\\+\\s*my_oranges", missing_msg = "Hast du `my_fruit` als Summe der Variablen `my_apples` und `my_oranges` erstellt?", append=F),
+  check_code(.,"my_fruit\\s*<-\\s*my_oranges\\s*\\+\\s*my_apples", missing_msg = "Hast du `my_fruit` als Summe der Variablen `my_apples` und `my_oranges` erstellt?", append=F)
  )
-ex() %>% check_output_expr("my_fruit", missing_msg = "Entfernen Sie nicht die Zeile, die `my_fruit` ausgibt.")
+ex() %>% check_output_expr("my_fruit", missing_msg = "Entferne nicht die Zeile, die `my_fruit` ausgibt.")
 
 
 
-success_msg("Super, weiter so! Machen Sie mit der nächsten Übung weiter.")
+success_msg("Super, weiter so! Mache mit der nächsten Übung weiter.")
 ```
 
 ---
@@ -476,11 +476,11 @@ my_logical <- FALSE
 
 `@sct`
 ```{r}
-ex() %>% check_object("my_numeric") %>% check_equal(incorrect_msg = "Haben Sie die Deklaration von `my_numeric` korrekt geändert, sodass sie den Wert 42 enthält?")
+ex() %>% check_object("my_numeric") %>% check_equal(incorrect_msg = "Hast du die Deklaration von `my_numeric` korrekt geändert, sodass sie den Wert 42 enthält?")
 
-ex() %>% check_object("my_character") %>% check_equal(incorrect_msg = "Haben Sie `my_character` korrekt in `\"universe\"` geändert? Vergessen Sie nicht die Anführungszeichen!")
+ex() %>% check_object("my_character") %>% check_equal(incorrect_msg = "Hast du `my_character` korrekt in `\"universe\"` geändert? Vergiss nicht die Anführungszeichen!")
 
-ex() %>% check_object("my_logical") %>% check_equal(incorrect_msg = "Haben Sie `my_logical` korrekt in `FALSE` geändert? Alle Buchstaben von `FALSE` sollten großgeschrieben sein!")
+ex() %>% check_object("my_logical") %>% check_equal(incorrect_msg = "Hast du `my_logical` korrekt in `FALSE` geändert? Alle Buchstaben von `FALSE` sollten großgeschrieben sein!")
 
 success_msg("Großartige Arbeit! Weiter zur nächsten Übung.")
 ```
@@ -546,18 +546,18 @@ class(my_logical)
 
 `@sct`
 ```{r}
-msg <- "Ändern Sie nicht die Deklaration der Variablen!"
+msg <- "Ändere nicht die Deklaration der Variablen!"
 ex()  %>% check_object("my_numeric", undefined_msg = msg)  %>%  check_equal(incorrect_msg = msg)
 
 ex()  %>% check_object("my_character", undefined_msg = msg)  %>%  check_equal(incorrect_msg = msg)
 
 ex()  %>% check_object("my_logical", undefined_msg = msg)  %>%  check_equal(incorrect_msg = msg)
 
-patt <- "Haben Sie `class(%1$s)` eingefügt, um den Datentyp von `%1$s` auszugeben?"
-ex() %>% check_output_expr("class(my_numeric)",missing_msg = "Entfernen Sie nicht den Code, der den Typ von `my_numeric` ausgibt.")
+patt <- "Hast du `class(%1$s)` eingefügt, um den Datentyp von `%1$s` auszugeben?"
+ex() %>% check_output_expr("class(my_numeric)",missing_msg = "Entferne nicht den Code, der den Typ von `my_numeric` ausgibt.")
 
 ex() %>% check_output_expr("class(my_character)",missing_msg = sprintf(patt, "my_character"))
 
 ex() %>% check_output_expr("class(my_logical)",missing_msg = sprintf(patt, "my_logical"))
-success_msg("Herzlichen Glückwunsch! Dies war die letzte Übung für dieses Kapitel. Gehen Sie zum nächsten Kapitel, um in die Welt der Vektoren einzutauchen!")
+success_msg("Herzlichen Glückwunsch! Dies war die letzte Übung für dieses Kapitel. Gehe zum nächsten Kapitel, um in die Welt der Vektoren einzutauchen!")
 ```

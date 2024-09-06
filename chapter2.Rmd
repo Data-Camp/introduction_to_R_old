@@ -51,9 +51,9 @@ vegas <- "Go!"
 
 `@sct`
 ```{r}
-ex() %>% check_object("vegas") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie den richtigen Wert `vegas` zuweisen. Vergessen Sie nicht, dass R zwischen Groß- und Kleinschreibung unterscheidet!")
+ex() %>% check_object("vegas") %>% check_equal(incorrect_msg = "Stelle sicher, dass du den richtigen Wert `vegas` zuweist. Vergiss nicht, dass R zwischen Groß- und Kleinschreibung unterscheidet!")
 
-success_msg("Großartig! Gehen Sie zur nächsten Übung über.")
+success_msg("Großartig! Gehe zur nächsten Übung über.")
 ```
 
 ---
@@ -112,14 +112,14 @@ boolean_vector <- c(TRUE, FALSE, TRUE)
 
 `@sct`
 ```{r}
-msg <- "Ändern Sie nicht den Code, der `numeric_vector` und `character_vector` definiert hat!"
+msg <- "Ändere nicht den Code, der `numeric_vector` und `character_vector` definiert hat!"
 ex() %>% check_object("numeric_vector", undefined_msg = msg) %>% check_equal(, incorrect_msg = msg)
 
 ex() %>% check_object("character_vector", undefined_msg = msg)  %>% check_equal(incorrect_msg = msg)
 
-ex() %>% check_object("boolean_vector") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie die richtigen Werte `boolean_vector` zuweisen. Verwenden Sie `c(TRUE, FALSE, TRUE)`. Setzen Sie keine Anführungszeichen um `TRUE` und `FALSE`! Stellen Sie außerdem sicher, dass Sie die gleiche Reihenfolge wie in den Anweisungen angegeben einhalten.")
+ex() %>% check_object("boolean_vector") %>% check_equal(incorrect_msg = "Stelle sicher, dass du die richtigen Werte `boolean_vector` zuweist. Verwende `c(TRUE, FALSE, TRUE)`. Setze keine Anführungszeichen um `TRUE` und `FALSE`! Stelle außerdem sicher, dass du die gleiche Reihenfolge wie in den Anweisungen angegeben einhaltest.")
 
-success_msg("Perfekt! Beachten Sie, dass das Hinzufügen eines Leerzeichens hinter den Kommas in der `c()`-Funktion die Lesbarkeit Ihres Codes verbessert. Lassen Sie uns im nächsten Übungsteil weiter mit der Vektorerstellung üben.")
+success_msg("Perfekt! Beachte, dass das Hinzufügen eines Leerzeichens hinter den Kommas in der `c()`-Funktion die Lesbarkeit deines Codes verbessert. Lass uns im nächsten Übungsteil weiter mit der Vektorerstellung üben.")
 ```
 
 ---
@@ -187,11 +187,11 @@ roulette_vector <- c(-24, -50, 100, -350, 10)
 
 `@sct`
 ```{r}
-ex() %>% check_object("poker_vector") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie die richtigen Werte `poker_vector` zuweisen.")
+ex() %>% check_object("poker_vector") %>% check_equal(incorrect_msg = "Stelle sicher, dass du die richtigen Werte `poker_vector` zuweist.")
 
-ex() %>% check_object("roulette_vector") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie die richtigen Werte `roulette_vector` zuweisen. Stellen Sie sicher, dass Sie die richtige Reihenfolge übernehmen!")
+ex() %>% check_object("roulette_vector") %>% check_equal(incorrect_msg = "Stelle sicher, dass du die richtige Werte `roulette_vector` zuweist. Stelle sicher, dass du die richtige Reihenfolge übernimmst!")
 
-success_msg("Sehr gut! Um den Inhalt Ihrer Vektoren zu überprüfen, denken Sie daran, dass Sie immer einfach die Variable in die Konsole eingeben und die Eingabetaste drücken können. Fahren Sie mit der nächsten Übung fort!")
+success_msg("Sehr gut! Um den Inhalt deiner Vektoren zu überprüfen, denke daran, dass du immer einfach die Variable in die Konsole eingibst und die Eingabetaste drücken könntest. Fahre  mit der nächsten Übung fort!")
 ```
 
 ---
@@ -270,16 +270,16 @@ names(roulette_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 
 `@sct`
 ```{r}
-ex() %>% check_object("poker_vector") %>% check_equal(incorrect_msg = "Ändern Sie nicht die Werte in `poker_vector`; sie wurden bereits für Sie kodiert.")
+ex() %>% check_object("poker_vector") %>% check_equal(incorrect_msg = "Ändere nicht die Werte in `poker_vector`; sie wurden bereits für dich kodiert.")
 
-ex() %>% check_object("roulette_vector") %>% check_equal(incorrect_msg = "Ändern Sie nicht die Werte in `roulette_vector`; sie wurden bereits für Sie kodiert.")
+ex() %>% check_object("roulette_vector") %>% check_equal(incorrect_msg = "Ändere nicht die Werte in `roulette_vector`; sie wurden bereits für dich kodiert.")
 
-ex() %>% check_object("poker_vector") %>% check_equal(eq_condition = 'equal', incorrect_msg = "Ändern Sie nicht den Code, der die Elemente in `poker_vector` benennt; konzentrieren Sie sich auf `roulette_vector`!")
+ex() %>% check_object("poker_vector") %>% check_equal(eq_condition = 'equal', incorrect_msg = "Ändere nicht den Code, der die Elemente in `poker_vector` benennt; konzentriere dich auf `roulette_vector`!")
 
-ex() %>% check_object("roulette_vector") %>% check_equal(eq_condition = 'equal',incorrect_msg = "Stellen Sie sicher, dass Sie den richtigen Namensvektor `roulette_vector` zuweisen. Verwenden Sie genau denselben Vektor, der verwendet wurde, um `poker_vector` zu benennen.")
+ex() %>% check_object("roulette_vector") %>% check_equal(eq_condition = 'equal',incorrect_msg = "Stelle sicher, dass du den richtigen Namensvektor `roulette_vector` zuweist. Verwende  genau denselben Vektor, der verwendet wurde, um `poker_vector` zu benennen.")
 
 
-success_msg("Gut gemacht! Fahren Sie mit der nächsten Übung fort.")
+success_msg("Gut gemacht! Fahre mit der nächsten Übung fort.")
 
 ```
 
@@ -347,7 +347,7 @@ names(roulette_vector) <- days_vector
 
 `@sct`
 ```{r}
-msg <- "Ändern Sie nicht die vordefinierten Variablen `poker_vector`, `roulette_vector` oder `days_vector`."
+msg <- "Ändere nicht die vordefinierten Variablen `poker_vector`, `roulette_vector` oder `days_vector`."
 
 ex() %>% check_object("poker_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
@@ -355,12 +355,12 @@ ex() %>% check_object("roulette_vector", undefined_msg = msg) %>% check_equal(in
 
 ex() %>% check_object("days_vector", undefined_msg = msg)  %>% check_equal(incorrect_msg = msg)
 
-ex() %>% check_object("poker_vector") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie `days_vector` den Namen von `poker_vector` zuweisen.", eq_condition = "equal",)
+ex() %>% check_object("poker_vector") %>% check_equal(incorrect_msg = "Stelle sicher, dass du `days_vector` den Namen von `poker_vector` zuweist.", eq_condition = "equal",)
 
-ex() %>% check_object("roulette_vector") %>% check_equal(eq_condition = "equal", incorrect_msg = "Stellen Sie sicher, dass Sie `days_vector` den Namen von `roulette_vector` zuweisen.")
+ex() %>% check_object("roulette_vector") %>% check_equal(eq_condition = "equal", incorrect_msg = "Stelle sicher, dass du `days_vector` den Namen von `roulette_vector` zuweist.")
 
 
-success_msg("Gut gemacht! Ein Ratschlag: Versuchen Sie, Code-Duplikate jederzeit zu vermeiden. Fahren Sie mit der nächsten Übung fort und lernen Sie, wie man mit Vektoren arithmetische Operationen durchführt!")
+success_msg("Gut gemacht! Ein Ratschlag: Versuche, Code-Duplikate jederzeit zu vermeiden. Fahre mit der nächsten Übung fort und lerne, wie man mit Vektoren arithmetische Operationen durchführt!")
 
 ```
 
@@ -440,16 +440,16 @@ total_vector
 
 `@sct`
 ```{r}
-msg <- "Ändern Sie nicht den Inhalt von `A_vector` oder `B_vector`!"
+msg <- "Änder nicht den Inhalt von `A_vector` oder `B_vector`!"
 ex() %>% check_object("A_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
 ex() %>% check_object("B_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
-ex() %>% check_object("total_vector") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass `total_vector` die Summe von `A_vector` und `B_vector` enthält.")
+ex() %>% check_object("total_vector") %>% check_equal(incorrect_msg = "Stelle sicher, dass `total_vector` die Summe von `A_vector` und `B_vector` enthält.")
 
-ex() %>% check_output_expr("total_vector", missing_msg = "Vergessen Sie nicht, `total_vector` auszugeben! Schreiben Sie einfach `total_vector` in eine neue Zeile.")
+ex() %>% check_output_expr("total_vector", missing_msg = "Vergiss nicht, `total_vector` auszugeben! Schreibe einfach `total_vector` in eine neue Zeile.")
 
-success_msg("Gute Arbeit! Fahren Sie mit der nächsten Übung fort.")
+success_msg("Gute Arbeit! Fahre mit der nächsten Übung fort.")
 ```
 
 ---
@@ -507,17 +507,17 @@ total_daily <- poker_vector + roulette_vector
 
 `@sct`
 ```{r}
-msg = "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg = "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 ex() %>% check_object("days_vector", undefined_msg = msg) %>% check_equal( incorrect_msg = msg)
 
 ex() %>% check_object("poker_vector",  undefined_msg = msg) %>% check_equal(eq_condition = "equal", incorrect_msg = msg)
 
 ex() %>% check_object("roulette_vector", undefined_msg = msg) %>% check_equal(eq_condition = "equal", incorrect_msg = msg)
 
-ex() %>% check_object("total_daily") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie die Summe von `poker_vector` und `roulette_vector` `total_daily` zuweisen.")
+ex() %>% check_object("total_daily") %>% check_equal(incorrect_msg = "Stelle sicher, dass du die Summe von `poker_vector` und `roulette_vector` `total_daily` zuweist.")
 
 
-success_msg("Großartig! Fahren Sie mit der nächsten Übung fort.")
+success_msg("Großartig! Fahre mit der nächsten Übung fort.")
 
 ```
 
@@ -600,20 +600,20 @@ total_week
 
 `@sct`
 ```{r}
-msg = "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg = "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 ex()  %>% check_object("days_vector", undefined_msg = msg)  %>% check_equal(incorrect_msg = msg)
 ex() %>% check_object("poker_vector",  undefined_msg = msg, ) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
 ex() %>% check_object("roulette_vector", undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
 
-ex() %>% check_object("total_poker") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie `total_poker` die Summe des `poker_vector` zuweisen.")
+ex() %>% check_object("total_poker") %>% check_equal(incorrect_msg = "Stelle sicher, dass du `total_poker` die Summe des `poker_vector` zuweist.")
 
-ex() %>% check_object("total_roulette") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie `total_roulette` die Summe des `roulette_vector` zuweisen.")
+ex() %>% check_object("total_roulette") %>% check_equal(incorrect_msg = "Stelle sicher, dass du `total_roulette` die Summe des `roulette_vector` zuweist.")
 
-ex() %>% check_object("total_week") %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie `total_week` die Summe der beiden anderen Gesamtvektoren zuweisen: `total_roulette` und `total_poker`.")
+ex() %>% check_object("total_week") %>% check_equal(incorrect_msg = "Stelle sicher, dass du `total_week` die Summe der beiden anderen Gesamtvektoren zuweist: `total_roulette` und `total_poker`.")
 
-ex() %>% check_output_expr("total_week", missing_msg = "Vergessen Sie nicht, `total_week` in einer neuen Zeile zu schreiben, um die Variable auszugeben.")
+ex() %>% check_output_expr("total_week", missing_msg = "Vergiss nicht, `total_week` in einer neuen Zeile zu schreiben, um die Variable auszugeben.")
 
 success_msg("Gut gemacht. Das sind ziemlich schlechte Nachrichten...")
 
@@ -684,7 +684,7 @@ total_poker > total_roulette
 
 `@sct`
 ```{r}
-msg <- "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg <- "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 ex()  %>% check_object("days_vector", undefined_msg = msg)  %>% check_equal(incorrect_msg = msg)
 
 ex() %>% check_object("poker_vector", undefined_msg = msg)  %>% check_equal(eq_condition = "equal", incorrect_msg = msg)
@@ -692,9 +692,9 @@ ex() %>% check_object("poker_vector", undefined_msg = msg)  %>% check_equal(eq_c
 ex() %>% check_object("roulette_vector",  undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
 
-ex()  %>% check_object("total_poker")  %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie `total_poker` die Summe des `poker_vector` zuweisen. Verwenden Sie `sum()`.")
-ex()  %>% check_object("total_roulette")  %>% check_equal(incorrect_msg = "Stellen Sie sicher, dass Sie `total_roulette` die Summe des `roulette_vector` zuweisen. Verwenden Sie `sum()`.")
-ex() %>% check_output_expr("total_poker > total_roulette",missing_msg = "Haben Sie den Vergleich korrekt durchgeführt? Um zu überprüfen, ob `total_poker` größer als `total_roulette` ist, können Sie `total_poker > total_roulette` verwenden.")
+ex()  %>% check_object("total_poker")  %>% check_equal(incorrect_msg = "Stelle sicher, dass du `total_poker` die Summe des `poker_vector` zuweist. Verwende `sum()`.")
+ex()  %>% check_object("total_roulette")  %>% check_equal(incorrect_msg = "Stelle sicher, dass du `total_roulette` die Summe des `roulette_vector` zuweist. Verwende `sum()`.")
+ex() %>% check_output_expr("total_poker > total_roulette",missing_msg = "Hast du den Vergleich korrekt durchgeführt? Um zu überprüfen, ob `total_poker` größer als `total_roulette` ist, könntest du `total_poker > total_roulette` verwenden.")
 
 success_msg("Gute Arbeit! Weiter zur nächsten Übung.")
 ```
@@ -763,10 +763,10 @@ ex() %>% check_object("poker_vector",  undefined_msg = msg) %>% check_equal(eq_c
 
 ex() %>% check_object("roulette_vector", undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
-ex() %>% check_object("poker_wednesday", undefined_msg = "Bitte stellen Sie sicher, dass Sie eine Variable `poker_wednesday` definieren.") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `poker_wednesday` nicht den korrekten Wert des `poker_vector` enthält.")
+ex() %>% check_object("poker_wednesday", undefined_msg = "Bitte stelle sicher, dass du eine Variable `poker_wednesday` definierst.") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `poker_wednesday` nicht den korrekten Wert des `poker_vector` enthält.")
 
 
-success_msg("Großartig! R ermöglicht es auch, mehrere Elemente aus einem Vektor gleichzeitig auszuwählen. Lernen Sie im nächsten Übung, wie das geht!")
+success_msg("Großartig! R ermöglicht es auch, mehrere Elemente aus einem Vektor gleichzeitig auszuwählen. Lerne im nächsten Übung, wie das geht!")
 
 ```
 
@@ -829,16 +829,16 @@ poker_midweek <- poker_vector[c(2, 3, 4)]
 
 `@sct`
 ```{r}
-msg = "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg = "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 ex() %>% check_object("days_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
 ex() %>% check_object("poker_vector", undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
 ex() %>% check_object("roulette_vector",  undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
-ex() %>% check_object("poker_midweek") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `poker_midweek` nicht die korrekten Werte aus `poker_vector` enthält. Sie können den Vektor `c(2, 3, 4)` in eckigen Klammern verwenden.")
+ex() %>% check_object("poker_midweek") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `poker_midweek` nicht die korrekten Werte aus `poker_vector` enthält. Du kannst den Vektor `c(2, 3, 4)` in eckigen Klammern verwenden.")
 
-success_msg("Gut gemacht! Fahren Sie mit der nächsten Übung fort, um sich weiter auf die Vektorauswahl zu spezialisieren!");
+success_msg("Gut gemacht! Fahre mit der nächsten Übung fort, um dich weiter auf die Vektorauswahl zu spezialisieren!");
 ```
 
 ---
@@ -896,16 +896,16 @@ roulette_selection_vector <- roulette_vector[2:5]
 
 `@sct`
 ```{r}
-msg = "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg = "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 ex() %>% check_object("days_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
 ex() %>% check_object("poker_vector",  undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
 ex() %>% check_object("roulette_vector", undefined_msg = msg) %>% check_equal( eq_condition = "equal",incorrect_msg = msg)
 
-ex() %>% check_object("roulette_selection_vector", undefined_msg = "Bitte stellen Sie sicher, dass Sie eine Variable `roulette_selection_vector` definieren.") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `roulette_selection_vector` nicht die richtige Auswahl aus `roulette_vector` enthält. Stellen Sie sicher, dass Sie die richtigen Indizes verwenden.")
+ex() %>% check_object("roulette_selection_vector", undefined_msg = "Bitte stelle sicher, dass du eine Variable `roulette_selection_vector` definierst.") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `roulette_selection_vector` nicht die richtige Auswahl aus `roulette_vector` enthält. Stelle sicher, dass du die richtigen Indizes verwendest.")
 
-success_msg("Großartig! Der Doppelpunkt-Operator ist äußerst nützlich und wird sehr oft in der R-Programmierung verwendet, also merken Sie ihn sich gut. Fahren Sie mit der nächsten Übung fort.")
+success_msg("Großartig! Der Doppelpunkt-Operator ist äußerst nützlich und wird sehr oft in der R-Programmierung verwendet, also merke ihn dich gut. Fahre mit der nächsten Übung fort.")
 ```
 
 ---
@@ -981,18 +981,18 @@ mean(poker_start)
 
 `@sct`
 ```{r}
-msg = "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg = "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 ex() %>% check_object("days_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
 ex() %>% check_object("poker_vector", undefined_msg = msg) %>% check_equal(eq_condition = "equal", incorrect_msg = msg)
 
 ex() %>% check_object("roulette_vector", undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
-ex() %>% check_object("poker_start") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `poker_start` nicht die ersten drei Werte von `poker_vector` enthält. Sie können `c(\"Monday\", \"Tuesday\", \"Wednesday\")` in eckigen Klammern verwenden, um dies zu tun.")
+ex() %>% check_object("poker_start") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `poker_start` nicht die ersten drei Werte von `poker_vector` enthält. Du kannst `c(\"Monday\", \"Tuesday\", \"Wednesday\")` in eckigen Klammern verwenden, um dies zu tun.")
 
-ex() %>% check_output_expr("mean(poker_start)", missing_msg = "Haben Sie den Durchschnitt der Werte in `poker_start` korrekt berechnet und ausgegeben? Verwenden Sie `mean(poker_start)`.")
+ex() %>% check_output_expr("mean(poker_start)", missing_msg = "Hast du den Durchschnitt der Werte in `poker_start` korrekt berechnet und ausgegeben? Verwende `mean(poker_start)`.")
 
-success_msg("Gute Arbeit! Neben dem Subsetten von Vektoren nach Index oder Name können Sie Vektoren auch durch Vergleich subsetten. Die nächsten Übungen werden Ihnen zeigen, wie!")
+success_msg("Gute Arbeit! Neben dem Subsetten von Vektoren nach Index oder Name kannst du Vektoren auch durch Vergleich subsetten. Die nächsten Übungen werden dir zeigen, wie!")
 
 ```
 
@@ -1074,16 +1074,16 @@ selection_vector
 
 `@sct`
 ```{r}
-msg <- "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg <- "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 ex() %>% check_object("days_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
 ex() %>% check_object("poker_vector",  undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
 ex() %>% check_object("roulette_vector",  undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
-ex() %>% check_object("selection_vector") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `selection_vector` nicht das richtige Ergebnis enthält. Denken Sie daran, dass R elementweise Operationen für Vektoren verwendet.")
+ex() %>% check_object("selection_vector") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `selection_vector` nicht das richtige Ergebnis enthält. Denk daran, dass R elementweise Operationen für Vektoren verwendet.")
 
-ex() %>% check_output_expr("selection_vector", missing_msg = "Vergessen Sie nicht, `selection_vector` auszugeben, indem Sie den Variablennamen in eine neue Zeile schreiben.")
+ex() %>% check_output_expr("selection_vector", missing_msg = "Vergiss nicht, `selection_vector` auszugeben, indem du den Variablennamen in eine neue Zeile schreibst.")
 
 success_msg("Großartig!")
 ```
@@ -1157,16 +1157,16 @@ poker_winning_days <- poker_vector[selection_vector]
 
 `@sct`
 ```{r}
-msg = "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg = "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 ex() %>% check_object("days_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
 ex() %>% check_object("poker_vector",  undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
 ex() %>% check_object("roulette_vector",  undefined_msg = msg) %>% check_equal(eq_condition = "equal",incorrect_msg = msg)
 
-ex() %>% check_object("selection_vector") %>% check_equal(incorrect_msg = "Ändern Sie nicht die Art und Weise, wie `selection_vector` berechnet wird.")
+ex() %>% check_object("selection_vector") %>% check_equal(incorrect_msg = "Ändere nicht die Art und Weise, wie `selection_vector` berechnet wird.")
 
-ex() %>% check_object("poker_winning_days") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `poker_winning_days` nicht das richtige Ergebnis enthält. Verwenden Sie `poker_vector[selection_vector]`.")
+ex() %>% check_object("poker_winning_days") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `poker_winning_days` nicht das richtige Ergebnis enthält. Verwende `poker_vector[selection_vector]`.")
 
 success_msg("Gute Arbeit! Weiter zur nächsten Übung.")
 ```
@@ -1231,7 +1231,7 @@ roulette_winning_days <- roulette_vector[selection_vector]
 
 `@sct`
 ```{r}
-msg = "Ändern Sie nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
+msg = "Ändere nichts an der Definition und Benennung von `poker_vector` und `roulette_vector`."
 
 ex() %>% check_object("days_vector", undefined_msg = msg) %>% check_equal(incorrect_msg = msg)
 
@@ -1239,11 +1239,11 @@ ex() %>% check_object("poker_vector", undefined_msg = msg) %>% check_equal(eq_co
 
 ex() %>% check_object("roulette_vector", undefined_msg = msg) %>% check_equal(eq_condition = "equal", incorrect_msg = msg)
 
-ex() %>% check_object("selection_vector") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `selection_vector` nicht das richtige Ergebnis enthält. Verwenden Sie `roulette_vector > 0`.")
+ex() %>% check_object("selection_vector") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `selection_vector` nicht das richtige Ergebnis enthält. Verwende `roulette_vector > 0`.")
 
-ex() %>% check_object("roulette_winning_days") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `roulette_winning_days` nicht das richtige Ergebnis enthält. Verwenden Sie `roulette_vector[selection_vector]`.")
+ex() %>% check_object("roulette_winning_days") %>% check_equal(incorrect_msg = "Es sieht so aus, als ob `roulette_winning_days` nicht das richtige Ergebnis enthält. Verwende `roulette_vector[selection_vector]`.")
 
 
-success_msg("Großartig! Diese Übung schließt das Kapitel über Vektoren ab. Das nächste Kapitel wird Ihnen die zweidimensionale Version von Vektoren vorstellen: Matrizen.")
+success_msg("Großartig! Diese Übung schließt das Kapitel über Vektoren ab. Das nächste Kapitel wird dir die zweidimensionale Version von Vektoren vorstellen: Matrizen.")
 
 ```
