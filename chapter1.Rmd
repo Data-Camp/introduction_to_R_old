@@ -57,9 +57,9 @@ Füge einfach eine Zeile R-Code hinzu, die die Summe von 6 und 12 berechnet, gen
 
 `@sct`
 ```{r}
-ex() %>% check_output_expr("18", missing_msg = "Stellen Sie sicher, dass Sie `6 + 12` in einer neuen Zeile hinzufügen. Beginnen Sie die Zeile nicht mit einem `#`, da Ihr R-Code sonst nicht ausgeführt wird!")
+ex() %>% check_output_expr("18", missing_msg = "Stelle sicher, dass du `6 + 12` in einer neuen Zeile hinzufügst. Beginne die Zeile nicht mit einem `#`, da dein R-Code sonst nicht ausgeführt wird!")
 
-success_msg("Super! Sehen Sie, wie die Konsole das Ergebnis des von Ihnen eingereichten R-Codes anzeigt? Jetzt, da Sie mit der Benutzeroberfläche vertraut sind, lassen Sie uns mit R loslegen!")
+success_msg("Super! Siehst du, wie die Konsole das Ergebnis deines eingereichten R-Codes anzeigt? Jetzt, da du mit der Benutzeroberfläche vertraut bist, lass uns mit R loslegen!")
 ```
 
 ---
