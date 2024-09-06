@@ -148,11 +148,11 @@ Ein weiteres Beispiel für den Modulo-Operator: `9 %% 2` ergibt `1`.
 
 `@sct`
 ```{r}
-msg = "Entfernen Sie nicht die anderen arithmetischen Beispiele!"
-ex() %>% check_output_expr("2^5", missing_msg = "Das Exponentialbeispiel ist nicht korrekt. Schreiben Sie `2 ^ 5` in eine neue Zeile.")
+msg = "Entferne nicht die anderen arithmetischen Beispiele!"
+ex() %>% check_output_expr("2^5", missing_msg = "Das Exponentialbeispiel ist nicht korrekt. Schreibe `2 ^ 5` in eine neue Zeile.")
 
-ex() %>% check_output_expr("28 %% 6", missing_msg = "Es scheint ein Problem mit dem Modulo-Beispiel zu geben. Schreiben Sie `28 %% 6` in eine neue Zeile.")
-success_msg("Großartig! Gehen Sie zur nächsten Übung.")
+ex() %>% check_output_expr("28 %% 6", missing_msg = "Es scheint ein Problem mit dem Modulo-Beispiel zu geben. Schreibe `28 %% 6` in eine neue Zeile.")
+success_msg("Großartig! Gehe zur nächsten Übung.")
 ```
 
 ---
